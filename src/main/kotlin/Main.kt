@@ -1,5 +1,4 @@
-fun main()
-{
+fun main() {
     //----------Kotlin Newbie To Pro----------//
 
     //1. hello world
@@ -135,10 +134,226 @@ fun main()
 
 
 //    8. ARRAYS
-    val myArray = arrayOf(1,2,3,4,"hello","guys",true)
-    println(myArray[4])
-    for(a in myArray){
-        println(a)
-    }
+//    val myArray = arrayOf(1,2,3,4,"hello","guys",true)
+//    println(myArray[4])
+//    for(a in myArray){
+//        println(a)
+//    }
+
+    //10. FOR LOOP
+    // var myArray = arrayOf(1, 2, 3, 4, 5)
+//    for(i in myArray)
+//    {
+//        println(i)
+//    }
+//
+//    for (i in 1..10){
+//        println(i)
+//    }
+//    for (item in 'a'..'g')
+//    {
+//        println(item)
+//    }
+
+//    for (item in 10 downTo 5 step 2)
+//    {
+//        println(item)
+//    }
+
+//    var myArray = arrayOf(4, 2, 5, 7,19, 8, 10, 3)
+//    var max = myArray[0]
+//
+//    for (item in myArray)
+//    {
+//        if (item > max) {
+//            max = item
+//        }
+//    }
+//    println(max)
+
+//    var myArray = arrayOf(1,2,4,5,6)
+//    var result = 0
+//
+//    for(i in myArray)
+//    {
+//        result += i
+//    }
+//    println(result)
+
+
+//    println("Masukan 5 number: ")
+//    var avg = 0.0
+//    for (item in 1..5) {
+//        var inputUser = readLine()?.toInt()
+//        if (inputUser != null)
+//        {
+//            avg+=inputUser/5.0
+//        }
+//    }
+//    println("Nilai rata-ratanya adalah $avg")
+
+
+    //11. LIST
+//    var myArray = arrayOf(1,2,3,4)
+//    var myList = listOf(1,2,3,4)
+//    var myList = mutableListOf(1,2,3,4)
+//
+//    myList.add(2)
+//    myList.removeAt(1)
+//    myList.remove(3)
+//
+//    myArray
+//    println(myList)
+//    println(myArray)
+
+//    var myList = mutableListOf<Int>()
+//    for (item in 1..5)
+//    {
+//        var inputUser = readLine()?.toInt()
+//        if(inputUser != null)
+//        {
+//            myList.add(inputUser)
+//        }
+//    }
+//    println(myList)
+
+//    var myListPR = mutableListOf<Int>()
+//    println("Masukan 5 anka")
+//    for (item in 1..5) {
+//        var inputUser = readLine()?.toInt()
+//        if (inputUser != null) {
+//            myListPR.add(inputUser)
+//        }
+//    }
+//
+//
+//    for (i in myListPR.size -1 downTo 0)
+//    {
+//        println(myListPR[i])
+//    }
+
+
+//    fibonanci
+//    println("masukan angka n > 1")
+//    var n = readLine()?.toInt()
+//    var myList = mutableListOf<Int>(0,1)
+//    if (n!=null){
+//        for (item  in 2..n-1){
+//            //(indeks array ke 2 dikurangi 2) + (indeks array ke 2 dikurangi 1)
+//            myList.add(myList[item-2] + myList[item-1])
+//        }
+//        println(myList)
+//    }
+
+    //12. WHEN
+//    println("masukan umur kamu: ")
+//    val age = readln()?.toInt()
+//    val x = 8
+//    when(age)
+//    {
+//       in 1..6 -> println("Kamu masih anak kecil")
+//        in 6..17 -> println("Kamu sudah remaja muda")
+//        18-> {
+//            println("selamat kamu sudah menginjak remaja")
+//            println("akhirnya 18 tahun")
+//        }
+//        19,20 -> if (19 > x || x > 20 ){
+//            println("kamu sudah remaja")
+//            println("memang tak seindah yang ku kira")
+//        }
+//
+//        in 21..65 -> println("Kamu sudah dewasa")
+//        else->println("kamu sudah sangat dewasa")
+//    }
+//
+//    println("kamu dari mana?")
+//    val from = readLine()
+//    when(from)
+//    {
+//        "indonesia" -> println("hai")
+//        "francis"-> println("bonjur")
+//        "portugis"-> println("olá")
+//        "arab" -> println("marhaban")
+//        "spain"->println("Hola")
+//        "inggris"-> println("Hallo")
+//        else -> println("saya tidak tau bahasa itu")
+//    }
+
+
+//    13. FUNCTIONS AND PARAMETERS
+//    printThreeLine()
+
+//    printPow(3,5)
+//    printPow(4,9)
+//
+//    printSum(2,5)
+//
+//    val teks = printText("Testing")
+//    println(teks)
+
+//    var resultMultiply = multiply(3,4)
+//    println(resultMultiply)
+
+//    val list = listOf(1,2,3,4)
+//    println(printFirstList(list))
+
+//    val userInput = readLine()?.toInt()
+//    if (userInput != null)
+//    {
+//        println(searchListNumber(list,userInput))
+//    }
+
+
+    //14. VARARG, DEFAULT AND NAMED PARAMETERS
+
+//    val arrayNumber = intArrayOf(1,232,5,341,32,1)
+//    val numbers = getMax(1,23,4,5,*arrayNumber,68,85,42)
+//    println(numbers)
+
+//    searcFor("how to be come a good programmer","bing")
+//    searcFor("how to good backend")
+//    searcFor(searchEngine = "yahoo", search = "how to proffession backend developer")
+
+//    print(alternatingSum(3,4,5,2,1,2,3))
+
+    //15. EXTENSION FUNCTIONS
+//    println("Masukan sebuah angka: ")
+//    val input = readLine()?.toInt()
+//
+//    if(input!= null)
+//    {
+//        if(input.isPrime())
+//        {
+//            println("$input is a prime number")
+//        }else{
+//            println("$input is not a prime number")
+//        }
+//    }
+
+//    val list = listOf(1,2,3,4,5,6)
+//   val sum = list.getProduct()
+//    println(sum)
+
+
+
+//    16. CLASSES
+
+//    val x=10
+//    val y=5
+//    println(x.plus(y))
+
+    val mySegitiga= Segitiga(4.0,7.0)
+    println("Segitiga Area adalah ${mySegitiga.area()}")
+    println("Segitiga Perimeter adalah ${mySegitiga.perimeter()}")
+    println("Segitiga sama kaki adalah ${mySegitiga.isSquare()}")
+
+    Lingkaran(5.0)
+    println()
+    Lingkaran(7.0)
 
 }
+
+
+
+
+
