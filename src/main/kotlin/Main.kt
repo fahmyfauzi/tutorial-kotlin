@@ -1,3 +1,5 @@
+import java.lang.NumberFormatException
+
 fun main()  {
     //----------Kotlin Newbie To Pro----------//
 
@@ -432,10 +434,287 @@ fun main()  {
 
 // 19. CONSTRUCTOR AND FUNCTION OVERLOADING
 
-    val mySegitiga = Segitiga(5.0)
+//    val mySegitiga = Segitiga(5.0)
+//    val lingkaran = Lingkaran(3.0)
+//    val triangle =Triangle(7.0,7.0,7.0)
+//
+//    val maxSegitgaDanLingkaran = maxArea(mySegitiga,lingkaran)
+//    val maxSegitigaLingkaranTriangle = maxArea(mySegitiga,lingkaran,triangle)
+//
+//    println("maksimum area dari segitiga dan lingkaran adalah $maxSegitgaDanLingkaran")
+//    println("maksimum area dari segitiga, lingkaran dan triangle adalah $maxSegitigaLingkaranTriangle")
+
+    //--------
+//    val list = listOf(1,2,3,4,5)
+//    val array = arrayOf(1,2,3,4,5)
+//
+//    println("Lisst: $list")
+//    printAlternately(array)
+
+//    println("list: $list")
+//    printAlternately(list)
+
+
+    //--------
+
+//    Lingkaran.randomCircle()
 
 
 
+//    20. OBJECTS AND COMPANION OBJECTS
+//    Lingkaran(5.0)
+//    Lingkaran.randomCircle()
+
+//    segiempat
+//    Segitiga.randomSegiEmpat()
+
+
+//21. ANONYMOUS CLASSES     /
+
+//    val a = 3.0
+//    val b = 4.0
+//    val height = 2.0
+//
+//    val parallelogram = object :Shape("Parallelogram",a,b,height){
+//        init {
+//            println("$name telah dibuat dengan a = $a b = $b dan height = $height")
+//            println("$name area adalah ${area()}")
+//            println("$name perimeter adalah ${perimeter()}")
+//        }
+//        override fun area(): Double {
+//            return a*height
+//        }
+//
+//        override fun perimeter(): Double {
+//            return 2*a+2*b
+//        }
+//
+//        fun isRectangle():Boolean = height == b
+//    }
+//    println("Parallelogram adalah ${parallelogram.isRectangle()}")
+//
+
+//    val base1 = 4.0
+//    val base2 = 6.0
+//    val side1= 3.0
+//    val side2 =5.0
+//    val height = 2.0
+//
+//    val trapesium = object :Shape("Trapesium",base1,base2,side1,side2,height){
+//        init {
+//            println("$name telah dibuat dengan base1 = $base1 base2 = $base2 side1= $side1 side2 = $side2 dan height = $height")
+//            println("$name area adalah ${area()}")
+//            println("$name perimeter adalah ${perimeter()}")
+//        }
+//        override fun area(): Double {
+//            return 0.5*height*(base1*base2)
+//        }
+//
+//        override fun perimeter(): Double {
+//            return base1+base2+side1+side2
+//        }
+//        fun isTrapesium ()= side2 == side1
+//
+//    }
+//    println("Trapesium adalah ${trapesium.isTrapesium()}")
+
+
+
+    //22. EXCEPTIONS
+
+//    println("Masukan sebuah angka: ")
+//    val input = try {
+//        readLine()?.toInt()
+//    }catch (e:NumberFormatException){
+//        0
+//    }finally {
+//        println("Ini dari block finally")
+//    }
+//    println("Angka kamu adalah: $input")
+
+//    println(devide(10.0,0.0))
+//    val cobaError = try {
+//        devide(5.0,0.0)
+//    }catch (e:DivisionByZeroException){
+//        0.0
+//    }
+//
+//    println("hasil dari division adalah $cobaError")
+
+
+// val errorLingkaran = try {
+//     lingkaranPositif(radius = -2.3)
+// }catch (e:NegativeException){
+//     0.0
+// }
+
+//    println(errorLingkaran)
+
+//    23. LAMBDA FUNCTIONS
+//    val circle1 = Lingkaran(5.0)
+//    val circle2 = Lingkaran(3.5)
+//    val triangle1 = Triangle(4.0,4.0,4.0)
+//    val triangle2 = Triangle(3.0,3.0,3.0)
+//    val rectagle1= Segitiga(6.0)
+//    val rectagle2= Segitiga(4.0,3.0)
+//
+//    var shapes = listOf(circle1,circle2,triangle1,triangle2,rectagle1,rectagle2)
+//    shapes = shapes.customFilter { shape, string -> shape.area() > 20.0  }.sortedBy{ it.area() }
+
+//     shapes = shapes.customFilter { it.area() > 20.0 }.sortedBy{ it.area() }
+//    shapes = shapes.filter { it.area() > 20.0 }.sortedBy{ it.area() }
+
+//    for (shape in shapes){
+//        println("${shape.name} : Area = ${shape.area()}")
+//    }
+
+//    var list = (1..10).toList()
+//    val sum = list.custoSum{it%2==1}
+//    println(list)
+//    println("Hasilnya adalah $sum")
+
+
+//    24. GENERIC
+    var triple =Triple(3,"Testing",true)
+    println(triple)
+    var customTriple = CustomTriple(3,"Hello",true)
+    customTriple.printTypes()
+
+    //-------
+        val circle1 = Lingkaran(5.0)
+    val circle2 = Lingkaran(3.5)
+    val triangle1 = Triangle(4.0,4.0,4.0)
+    val triangle2 = Triangle(3.0,3.0,3.0)
+    val rectagle1= Segitiga(6.0)
+    val rectagle2= Segitiga(4.0,3.0)
+
+    var shapes = listOf(circle1,circle2,triangle1,triangle2,rectagle1,rectagle2)
+
+     shapes = shapes.customFilter { it.area() > 20.0 }.sortedBy{ it.area() }
+
+    for (shape in shapes){
+        println("${shape.name} : Area = ${shape.area()}")
+    }
+
+
+}
+
+fun List<Int>.custoSum(filterFucntion: (Int) -> (Boolean)):Int{
+    var sum = 0
+    for (num in this)
+    {
+        if(filterFucntion(num)){
+            sum+=num
+        }
+    }
+    return sum
+
+}
+
+//fun List<Shape>.customFilter(filterFuction:(Shape) -> (Boolean)):List<Shape> {
+//    val listResult = mutableListOf<Shape>()
+//    for (shape in this){
+//        if(filterFuction(shape)){
+//            listResult.add(shape)
+//        }
+//    }
+//    return listResult
+//}
+
+//fun List<Shape>.customFilter(filterFuction:(Shape,String) -> (Boolean)):List<Shape> {
+//    val listResult = mutableListOf<Shape>()
+//    for (shape in this){
+//        if(filterFuction(shape,"Hello")){
+//            listResult.add(shape)
+//        }
+//    }
+//    return listResult
+//}
+
+//generic
+fun <T> List<T>.customFilter(filterFuction:(T) -> (Boolean)):List<T> {
+    val listResult = mutableListOf<T>()
+    for (item in this){
+        if(filterFuction(item)){
+            listResult.add(item)
+        }
+    }
+    return listResult
+}
+
+class DivisionByZeroException : Exception("Kamu tidak bisa membagi angka dengan 0 (nol). mohon masukan angka yang benar")
+
+fun lingkaranPositif(radius:Double): Lingkaran
+{
+    if(radius < 0) {
+        throw NegativeException()
+    }
+    return Lingkaran(radius)
+}
+class NegativeException:Exception("Radius tidak boleh negatif")
+
+
+fun devide(a:Double,b:Double):Double{
+    if(b==0.0)
+    {
+        throw DivisionByZeroException()
+    }
+    return a/b
+}
+
+
+fun maxArea(shape1:Shape,shape2:Shape):Double{
+    val areaShape1 =shape1.area()
+    val areaShape2 = shape2.area()
+    return  if(areaShape1 > areaShape2) areaShape1 else areaShape2
+}
+
+fun maxArea(shape1:Shape, shape2:Shape,shape3:Shape):Double{
+    val maxAreaShape1Shape2 = maxArea(shape1,shape2)
+    val areaShape3 = shape3.area()
+    return if(maxAreaShape1Shape2 > areaShape3) maxAreaShape1Shape2 else areaShape3
+}
+
+fun printAlternately(list:List<Int>)
+{
+    var i = 0
+    var j = list.size -1
+    var toggle = true
+    while (i <= j)
+    {
+        if(toggle)
+        {
+            println(list[i])
+            i++
+        }else{
+            println(list[j])
+            j--
+        }
+        toggle = !toggle
+    }
+}
+
+fun printAlternately(arr:Array<Int>)
+{
+    var i = 0
+    var j = arr.size-1 //5
+    var toggle =true
+    while(i <= j)
+    {
+        if(toggle)
+        {
+            println(arr[i])
+//            println("i++")
+
+            i++
+        }else{
+            println(j)
+//            println("j--")
+
+            j--
+        }
+        toggle = !toggle
+    }
 }
 
 

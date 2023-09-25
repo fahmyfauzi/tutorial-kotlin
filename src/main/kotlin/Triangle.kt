@@ -4,8 +4,8 @@ class Triangle (val a:Double, val b:Double, val c:Double):Shape("Triangle"){
 
     init {
         println("$name telah dibuat dengan a = $a b = $b c = $c")
-        println("$name perimeter adalah ${perimeter()}")
         println("$name area adalah ${area()}")
+        println("$name perimeter adalah ${perimeter()}")
 //        println(changeName("testing")) //contoh protected
 
     }

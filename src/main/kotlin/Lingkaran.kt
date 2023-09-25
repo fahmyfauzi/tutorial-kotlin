@@ -1,3 +1,5 @@
+import kotlin.random.Random
+
 //class Lingkaran (val radius:Double) : Shape("Lingkaran"){
 //    private val pi= 3.141592
 //    init {
@@ -13,7 +15,14 @@
 
 //abstrak
 class Lingkaran (val radius:Double) : Shape("Lingkaran"){
-    private val pi= 3.141592
+
+    companion object{
+        fun randomCircle():Lingkaran
+        {
+            val radius = Random.nextDouble(1.0 ,10.0)
+            return Lingkaran(radius)
+        }
+    }
     init {
         println("$name dibuat dengan radius $radius")
         println("$name area ${area()}")
@@ -21,8 +30,8 @@ class Lingkaran (val radius:Double) : Shape("Lingkaran"){
     }
 
     override fun area(): Double {
-        return radius*radius*pi
+        return radius*radius*ImportantNumber.PI
     }
 
-    override fun perimeter() = 2*radius*pi
+    override fun perimeter() = 2*radius*ImportantNumber.PI
 }

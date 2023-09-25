@@ -16,6 +16,9 @@
 
 //abstrak
 abstract class Shape( var name:String){
+
+    constructor(name:String,vararg dimension:Double):this(name)
+
     init {
         println("Saya adalah superclass")
     }
