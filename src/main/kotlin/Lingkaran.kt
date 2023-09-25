@@ -1,12 +1,28 @@
-class Lingkaran (val radius:Double){
-    val pi= 3.141592
+//class Lingkaran (val radius:Double) : Shape("Lingkaran"){
+//    private val pi= 3.141592
+//    init {
+//        println("$name dibuat dengan radius $radius")
+//        println("$name area ${area()}")
+//        println("$name perimeter ${perimeter()}")
+//    }
+//
+//    fun area() = radius*radius*pi
+//
+//    fun  perimeter() =2*radius*pi
+//}
+
+//abstrak
+class Lingkaran (val radius:Double) : Shape("Lingkaran"){
+    private val pi= 3.141592
     init {
-        println("Lingkaran dibuat dengan radius $radius")
-        println("Lingkaran area ${area()}")
-        println("Lingkaran perimeter ${perimeter()}")
+        println("$name dibuat dengan radius $radius")
+        println("$name area ${area()}")
+        println("$name perimeter ${perimeter()}")
     }
 
-    fun area() = radius*radius*pi
+    override fun area(): Double {
+        return radius*radius*pi
+    }
 
-    fun  perimeter() =2*radius*pi
+    override fun perimeter() = 2*radius*pi
 }

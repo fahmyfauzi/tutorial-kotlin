@@ -1,4 +1,4 @@
-fun main() {
+fun main()  {
     //----------Kotlin Newbie To Pro----------//
 
     //1. hello world
@@ -139,6 +139,67 @@ fun main() {
 //    for(a in myArray){
 //        println(a)
 //    }
+
+    //     10. while loop
+
+//     var x = 3
+//     while (x <= 5)
+//     {
+//         println("test")
+//         x++
+//     }
+
+//     val myArray = arrayOf("Test",1,2,true,"hello","world")
+//     val myArrayLength = myArray.size
+//     var i = 0
+//     while(i < myArrayLength){
+//         println(myArray[i])
+//         i++
+//     }
+
+//     println("Masukan sebuah number: ")
+//     var inputUser = readLine()?.toInt()
+//     var i = 0
+//
+//     if (inputUser != null)
+//     {
+//         while (inputUser >= i)
+//         {
+//             println(inputUser)
+//             inputUser--
+//         }
+//     }
+
+//     println("Masukan number 1:")
+//     var number1 =  readLine()?.toInt()
+//     println("Masukan number 2:")
+//     var number2 =  readLine()?.toInt()
+//
+//     var i = 1
+//     var result = 1
+//
+//     if( number1 != null && number2 !=null)
+//     {
+//         while (i <= number2)
+//         {
+//           // number 1 = 2 , number 2= 5, hasilnya 2*2*2*2*2 =32
+//             result*=number1*1
+//             /*
+//             contoh inputan number1=3 dan number2=3
+//             iterasi 1 : 1 * 3 * 1 = 3
+//             iterasi 2 : 3 * 3 * 1 = 9
+//             iterasi 3 : 9 * 3 * 1 = 27
+//              */
+//             println("result now $result")
+//             println("index now $i")
+//             println("number now $number1")
+//             i++
+//         }
+//
+//         print(result)
+//     }
+
+
 
     //10. FOR LOOP
     // var myArray = arrayOf(1, 2, 3, 4, 5)
@@ -342,14 +403,38 @@ fun main() {
 //    val y=5
 //    println(x.plus(y))
 
-    val mySegitiga= Segitiga(4.0,7.0)
-    println("Segitiga Area adalah ${mySegitiga.area()}")
-    println("Segitiga Perimeter adalah ${mySegitiga.perimeter()}")
-    println("Segitiga sama kaki adalah ${mySegitiga.isSquare()}")
+//    val mySegitiga= Segitiga(4.0,7.0)
+//    println("Segitiga Area adalah ${mySegitiga.area()}")
+//    println("Segitiga Perimeter adalah ${mySegitiga.perimeter()}")
+//    println("Segitiga sama kaki adalah ${mySegitiga.isSquare()}")
+//
+//    Lingkaran(5.0)
+//    println()
+//    Lingkaran(7.0)
 
-    Lingkaran(5.0)
-    println()
-    Lingkaran(7.0)
+
+//    Triangle(2.0,4.0,6.0)
+
+//    17. INHERITANCE
+
+//    val myCircle = Lingkaran(2.0)
+//    myCircle.pi //contoh private
+//    Triangle(2.0,4.0,6.0)
+//    val ukuranSegitiga = Segitiga(2.0,4.0)
+//    println(ukuranSegitiga.area())
+//    println(ukuranSegitiga.perimeter())
+//    println(ukuranSegitiga.isSquare())
+//
+//    ukuranSegitiga.changeName("Testing")
+//    println(ukuranSegitiga.name)
+
+//    18. ABSTRACT CLASSES
+
+// 19. CONSTRUCTOR AND FUNCTION OVERLOADING
+
+    val mySegitiga = Segitiga(5.0)
+
+
 
 }
 
